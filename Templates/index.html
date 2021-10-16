@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Housing</title>
+</head>
+<style>
+    body {
+  background-color: #f2f2f2;
+  margin: 0;
+  font-family: 'Poppins';
+  background:url({% static 'images/house1.jpg' %});
+  background-size:cover;
+}
+.heading1{
+    text-align:Center;
+    color:#007af3;
+}
+.navbar {
+  background: white;
+  padding: 1em;
+  text-decoration: none;
+  font-weight: bold;
+  color: #0a0a0a;
+  font-size: 1.2em;
+}
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  place-content: space-between;
+  text-transform: uppercase;
+}
+a{
+    text-decoration:none;
+}
+.primary-nav{
+  font-weight: bold;
+  color: grey;
+  letter-spacing: 0.3 em;
+
+}
+.register{
+    margin-left:4em;
+}
+.about{
+    margin-left:4em;
+}
+.logo1{
+    text-align:center;
+    height:35px;
+    width:100%;
+}
+
+</style>
+<body>
+<div class="navbar">
+    <div class="container">
+        <div class="primary-nav">
+            <a href="/">Home</a>
+            <a class="register" href="/register">Register</a>
+        </div>
+        <div>
+            <img class="logo1" src="{% static 'images/home.png' %}" alt="none">
+        </div>
+        <div class="secondary-nav">
+            <a href="/login">Login</a>
+            <a class="about"  href="#">about us</a>
+
+        </div>
+    </div>
+
+</div>
+<h1 class="heading1">Welcome to housing estates</h1>
+<table border='0' width="50%" cellspacing="0" cellpadding="0" align="center" bgcolor="lightblue">
+    <tr height="200px">
+        <td width=3%></td>
+        <td><p> This is a Project which predict the price of houses by using the trained data and gives the approx value
+            of the housing property.
+        </p></td>
+
+        <td width=3%></td>
+</table>
+</body>
+
+{% block content %} {% endblock %}
+
+</html>

@@ -1,0 +1,133 @@
+    {% load static %}
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+<style>
+
+form {
+    border: 2px solid #f1f1f1;
+  }
+
+
+  input[type=text],
+  input[type=password] {
+    size: 20px;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
+  button {
+    background-color:green;
+    color:white;
+    margin: 0px 0px;
+    font-size:20px ;
+    font-family:calibri ;
+    height:50px;
+    border:none;
+    cursor: pointer;
+    width: 100%;
+    box-shadow: none;
+  }
+
+
+
+  button:hover {
+    opacity: 1;
+  }
+
+
+  .container {
+    padding: 30px;
+  }
+
+
+
+  @media screen and (max-width: 300px) {
+    span.new {
+      display: block;
+      float: none;
+    }
+  }
+  body {
+  background-color: lightgreen ;
+  }
+x
+{
+  color : white;
+  font-size : 20px;
+  text-decoration : none;
+}
+x:hover
+{
+  color : yellow;
+  font-size : 24px;
+}
+.xx
+{
+  text-align : justify;
+font-size : 18px;
+line-height : 30px;
+text-indent : 0px;
+padding : 20px;
+
+opacity : 0.9;
+
+}
+.yy
+{
+  text-align : center;
+font-size : 18px;
+line-height : 10px;
+text-indent : 10px;
+padding : 0px;
+//opacity : 0.7;
+
+}
+label
+{
+color:Black;
+}
+
+h2 {
+   color: black;
+}
+
+</style>
+</head>
+<body><table>
+  <tr height="10px"></tr></table>
+</tr></table>
+<h2><P align="left">Enter the below details,</P></h2>
+<table>
+  <tr height="20px"></tr></table>
+ <form action="predict" method="post">
+{% csrf_token %}
+
+
+    <label><b>Area</b></label>
+    <input type="text" placeholder="Area" name="area" required>
+
+    <label><b>BHK</b></label>
+    <input type="text" placeholder="BHK" name="bhk" required>
+
+    <label><b>Parking</b></label>
+    <input type="text" placeholder="Parking" name="parking" required>
+
+    <label><b>Furnishing</b></label>
+    <input type="text" placeholder="Furnishing" name="furnishing" required>
+
+    <label><b>Transaction</b></label>
+    <input type="text" placeholder="Transaction" name="transaction" required>
+
+
+
+
+    <button type="submit">Predict</button>
+  </div>
+
+</form>
+</body>
+</html>
